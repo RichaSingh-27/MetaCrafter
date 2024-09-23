@@ -1,13 +1,53 @@
-# MetaCrafter
-It is a repository for writing all the codes for Metacrafter
-There are two files in this repository that are:-
-1. JavaScript_Code
-2. Solidity_Token
+# NFTs creation
 
-1>JAVASCRIPT_CODE
-This file contains the code for creating NFTs or a variable and function just like a NFT . The variable will store some random values and there will be three function one for storing the values in the NFTs variable ,the other one for showing/listing all the NFTs and the third to count the total number of NFTs created.ANd lastly we will call all the three function and pass four different parameters while calling the function to store the NFTs.
+This JavaScript program is a simple Nfts creation program that demonstrates the basic syntax and functionality of the JavaScript programming language. The purpose of this program is to serve as a starting point for those who are new to JavaScript programming language and want to get a feel for how it works.
 
-2>SOLIDITY_TOKEN
-This file contains the code for creating own token and performing adding and burning function on it.In the first we will create a contract for the token which will contain its name,abbreviation and will map the address.Now we will create two function one to create the token and increase the balance and second to burn the token and reduce the balance from the sender side and it will also map that the sender should have the balance to send the token otherwise it won't work.
+## Description
 
+This program is a simple NFTs creation program written in JavaScript, a scripting language used to develop web pages. The program has a single variable named NFTs which is of an array type and can store multiple values. We have given four parameter to the NFTs variable which are Name,Course,Branch and Year.Now we have created three function:- mintNFT,listNFT and getTotalSupply.The first function is to store the values in NFT variable and it has four parameters in it(Name,Course,Branch and Year) and the second function is list the stored values of NFT and the third one is to count the total number of NFTs present.
+
+## Getting Started
+
+### Executing program
+
+To run this program, you can use any online or offline JavaScript interpreter,GDB an online JAvaScript IDE which I have used. To get started, go to the Remix website at "https://www.onlinegdb.com".
+
+Once you are on the GDB website,select the language as javascript. Copy and paste the following code into the file:
+
+```javascript
+
+const NFTs=[]
+
+function mintNFT (name,course,branch,year ) {
+    const NFT ={
+        "name":name,
+        "course":course,
+        "branch": branch,
+        "year":year
+        
+    }
+    NFTs.push(NFT);
+    console.log("Pushed:"+name);
+}
+function listNFTs () {
+    for(let i=0;i<NFTs.length;i++){
+        console.log("\n NAME: "+NFTs[i].name);
+        console.log("\n Course: "+NFTs[i].course);
+        console.log("\n branch: "+NFTs[i].branch);
+        console.log("\n Year: "+NFTs[i].year);
+    }
+
+}
+function getTotalSupply() {
+    console.log(NFTs.length);
+}
+mintNFT("RUCHI","CSE","B.E","3RD");
+listNFTs();
+getTotalSupply();
+
+```
+
+To compile the code, click on the "Run" tab in the left-hand sidebar. 
+
+Once the code is compiled, you can see the output on the output terminal
    
